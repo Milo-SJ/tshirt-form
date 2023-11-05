@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+body {
+  background-color: #0c2a28;
+  color: #e4e1b6;
+  font-family: "Roboto";
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+legend {
+  color: #cd5b43;
+}
+
+fieldset {
+  margin: 20px;
+  text-align: center;
+  border-radius: 4px;
+  border-color: #ada9a9;
+}
+fieldset ::-moz-placeholder {
+  color: #e4e1b6;
+}
+fieldset ::placeholder {
+  color: #e4e1b6;
+}
+fieldset textarea {
+  border-radius: 4px;
+  background-color: #1f615d;
+  resize: none;
+}
+fieldset textarea:focus {
+  background-color: #cd5b43;
+}
+fieldset input {
+  margin: 5px;
+  border-radius: 4px;
+  background-color: #1f615d;
+}
+fieldset input[type=text] {
+  padding: 8px;
+}
+fieldset input:focus {
+  background-color: #cd5b43;
+}
+fieldset select {
+  color: #e4e1b6;
+  background-color: #1f615d;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.button-container button:hover {
+  background-color: #cd5b43;
+}
+.button-container button {
+  margin-bottom: 10px;
+  background-color: #1f615d;
+  color: #e4e1b6;
+  padding: 4px;
+}
+
+@media screen and (min-width: 600px) {
+  form {
+    width: 600px;
+  }
+}/*# sourceMappingURL=styles.css.map */

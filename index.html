@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=form, initial-scale=1.0" />
+    <title>T-shirt Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form
+        action="https://form-reader.netlify.app/.netlify/functions/formReader"
+        method="post"
+      >
+        <fieldset>
+          <legend><h1>Personal Details</h1></legend>
+          <legend><h3>Name</h3></legend>
+          <label for="title">
+            <select name="title" id="title">
+              <option value="mr">Mr</option>
+              <option value="mrs">Mrs</option>
+              <option value="ms">Ms</option>
+              <option value="mx">Mx</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label for="first-name">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              required
+            />
+          </label>
+
+          <label for="last-name">
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+              required
+            />
+          </label>
+
+          <legend><h3>Email</h3></legend>
+          <label for="email">
+            <input
+              type="email"
+              name="user-email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+          </label>
+
+          <legend><h3>Address</h3></legend>
+          <label for="user-address"></label>
+          <textarea
+            name="user-address"
+            id="user-address"
+            cols="20"
+            rows="10"
+            placeholder="Please provide your address"
+            required
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend><h1>Order Details</h1></legend>
+
+          <legend><h3>Pattern</h3></legend>
+
+          <label for="back-print">Back Print</label>
+          <input
+            type="checkbox"
+            name="pattern"
+            id="back-print"
+            value="back-print"
+          />
+
+          <label for="front-print">Front Print</label>
+          <input
+            type="checkbox"
+            name="pattern"
+            id="front-print"
+            value="front-print"
+          />
+
+          <label for="details">Details</label>
+          <input type="checkbox" name="pattern" id="details" value="details" />
+
+          <legend><h3>Gender</h3></legend>
+          <label for="gender">
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="non-binary">Non-Binary</option>
+              <option value="other">Other</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+            </select>
+          </label>
+          <!-- gender drop down or radio button Male Female Unisex Other -->
+
+          <legend><h3>Size</h3></legend>
+          <label for="size-xs">XS</label>
+          <input type="radio" name="size" id="size-xs" value="xs" />
+
+          <label for="size-s">S</label>
+          <input type="radio" name="size" id="size-s" value="s" />
+
+          <label for="size-m">M</label>
+          <input type="radio" name="size" id="size-m" value="m" />
+
+          <label for="size-l">L</label>
+          <input type="radio" name="size" id="size-l" value="l" />
+
+          <label for="size-xl">XL</label>
+          <input type="radio" name="size" id="size-xl" value="xl" />
+
+          <!-- size -->
+        </fieldset>
+
+        <fieldset>
+          <legend><h1>Comments</h1></legend>
+          <label for="comments">
+            <textarea
+              name="comments"
+              id="comments"
+              cols="20"
+              rows="10"
+              placeholder="Please provide any comments or feedback here"
+            ></textarea>
+          </label>
+        </fieldset>
+        <div class="button-container">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
